@@ -1,0 +1,24 @@
+/**index.wxss**/
+.swiper {
+  height: 400rpx;
+  width: 100%;
+}
+.swiper-image {
+  height: 100%;
+  width: 100%;
+}
+.slide-image1 {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+.slide-image2 {
+  height: 100%;
+  width: 100%;
+  background-color: green;
+}
+.slide-image3 {
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+}

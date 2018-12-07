@@ -1,0 +1,10 @@
+{
+  "pages": ["pages/index/index", "pages/logs/logs"],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f00",
+    "navigationBarTitleText": "柏雪的小程序",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ffffff"
+  }
+}
