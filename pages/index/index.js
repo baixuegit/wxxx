@@ -9,7 +9,8 @@ Page({
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
     ],
-    indicatorDots: true, //是否显示面板指示点
+    indicatorDots: true, //是否显示小圆点
+    circular: true, //是否是无缝轮播
     autoplay: true, //是否自动切换
     interval: 3000, //自动切换时间间隔
     duration: 1000, //滑动动画时长
@@ -61,5 +62,14 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  upper(e) {
+    console.log('向上滚动' + e)
+  },
+  lower(e) {
+    console.log('向下滚动' + e)
+  },
+  scroll(e) {
+    console.log('滚动事件' + e)
   }
 })
