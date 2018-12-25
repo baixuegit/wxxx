@@ -6,31 +6,5 @@
     "navigationBarTitleText": "柏雪的小程序",
     "navigationBarTextStyle": "black",
     "backgroundColor": "#ffffff"
-  },
-  "tabBar": {
-    "color": "#000",
-    "selectedColor": "#f00",
-    "backgroundColor": "#fff",
-    "borderStyle": "black",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "static/icon/ai.png",
-        "selectedIconPath": "static/icon/ai2.png"
-      },
-      {
-        "pagePath": "pages/logs/logs",
-        "text": "热门",
-        "iconPath": "static/icon/ai.png",
-        "selectedIconPath": "static/icon/ai2.png"
-      },
-      {
-        "pagePath": "pages/logs/logs",
-        "text": "我的",
-        "iconPath": "static/icon/ai.png",
-        "selectedIconPath": "static/icon/ai2.png"
-      }
-    ]
   }
 }

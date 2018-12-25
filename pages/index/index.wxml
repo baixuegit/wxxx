@@ -1,27 +1,34 @@
 <!--index.wxml-->
-<view>swiper</view>
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
-    <!-- <block wx:for="{{imgUrls}}"> -->
+<!-- 导出tarbar -->
+<import src="../../components/tarbar/template.wxml" />
+<!-- 使用tarbar -->
+<template is="tabbar" data="{{tabbar}}"/>
+<view class="index_wapper">
+  <!-- <view>swiper</view> -->
+  <swiper indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}"  bindtap="swipertap">
+    <block wx:for="{{lunboData}}" wx:for-item="item" wx:key="index">
       <swiper-item>
-        <!-- <image src="{{item}}" class="slide-image" /> -->
-        <view  class="bc_red swiper-image"></view>
+        <image src="{{item.imgUrl}}" id="{{item.id}}" class="swiper-image"></image>
       </swiper-item>
-      <swiper-item>
-        <view  class="bc_green swiper-image"></view>
-      </swiper-item>
-      <swiper-item>
-        <view  class="bc_blue swiper-image"></view>
-      </swiper-item>
-    <!-- </block> -->
+    </block>
   </swiper>
-<view>scroll-view</view>
+  <view class="navMenu">
+    <block wx:for="{{navMenuList}}" wx:for-item='item' wx:key="index">
+      <view class="navMnuItem">
+        <view class="inNavMnuItem" id="{{item.id}}">{{item.text}}</view>
+      </view>
+    </block>
+  </view>
+  <!-- <view>scroll-view</view> -->
   <!-- scroll-top 滚动条距离视图的距离 -->
   <!-- scroll-into-view 值为元素的id：表示滚动的方向，滚动到该元素-->
   <!-- bindscrolltoupper  -->
-   <scroll-view scroll-y style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="red" scroll-top="0">
+   <!-- <scroll-view scroll-y style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="red" scroll-top="0">
     <view class="bc_blue swiper-image"></view>
     <view id="red" class="bc_red swiper-image"></view>
     <view class="bc_green swiper-image"></view>
-  </scroll-view>
+  </scroll-view> -->
+</view>
+
 
 

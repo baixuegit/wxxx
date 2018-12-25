@@ -1,4 +1,8 @@
 <!--logs.wxml-->
+<!-- 导出tarbar -->
+<import src="../../components/tarbar/template.wxml" />
+<!-- 使用tarbar -->
+<template is="tabbar" data="{{tabbar}}"/>
 <view class="container log-list">
   <block wx:for="{{logs}}" wx:for-item="log">
     <text class="log-item">{{index + 1}}. {{log}}</text>

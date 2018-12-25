@@ -1,6 +1,10 @@
 /**index.wxss**/
+/* .index_wapper {
+  padding-top: 120rpx;
+} */
 .swiper {
-  height: 400rpx;
+  margin-top: 120rpx;
+  /* height: 600rpx; */
   width: 100%;
 }
 .swiper-image {
@@ -16,3 +20,25 @@
 .bc_blue {
   background-color: blue;
 }
+.navMenu{
+  width: 100%;
+  padding:20rpx 0 20rpx 20rpx;
+  box-sizing: border-box;
+}
+.navMnuItem{
+  display: inline-block;
+  width: 25%;
+  height: 120rpx;
+  margin-bottom: 20rpx;
+}
+.inNavMnuItem{
+  /* width:100%; */
+  height: 100%;
+  box-sizing: border-box;
+  border:1px solid #ccc;
+  margin-right: 20rpx;
+  text-align: center;
+  line-height: 120rpx;
+  
+}
+

@@ -4,22 +4,31 @@ const app = getApp()
 
 Page({
   data: {
-    imgUrls: [
-      'http://p1.image.hiapk.com/uploads/allimg/150709/7730-150F9102Q9.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+    lunboData: [
+      { id: 'b1', imgUrl: '../../static/banner/1.png' },
+      { id: 'b2', imgUrl: '../../static/banner/2.jpg' },
+      { id: 'b3', imgUrl: '../../static/banner/3.jpg' }
     ],
     indicatorDots: true, //是否显示小圆点
     circular: true, //是否是无缝轮播
     autoplay: true, //是否自动切换
     interval: 3000, //自动切换时间间隔
     duration: 1000, //滑动动画时长
+    indicatorColor:'rgba(251,45,180,.3)',//小圆点的颜色
+    indicatorActiveColor:'#e20000',//小圆点的选中的颜色
     inputShowed: false,
     inputVal: '',
     motto: '小程序你好！',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    tabbar: {},
+    navMenuList:[//配置菜单导航
+      {id:'item1',text:'服装'},
+      {id:'item2',text:'护肤'},
+      {id:'item3',text:'美妆'},
+      {id:'item4',text:'食品'},
+    ]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -27,7 +36,11 @@ Page({
       url: '../logs/logs'
     })
   },
+  // 加载页面
   onLoad: function() {
+    //调用app.js中的函数
+    app.changeTabBar()
+    
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -64,12 +77,29 @@ Page({
     })
   },
   upper(e) {
-    console.log('向上滚动' + e)
+    // console.log('向上滚动' + e)
   },
   lower(e) {
-    console.log('向下滚动' + e)
+    // console.log('向下滚动' + e)
   },
   scroll(e) {
-    console.log('滚动事件' + e)
+    // console.log('滚动事件' + e)
+  },
+  // 点击banner触发的事件
+  swipertap(e) {
+    let _id = e.target.id
+    console.log(_id)
+    if(_id == 'b1'){
+      console.log('这是第一张海报')
+    }else if(_id == 'b2'){
+      console.log('这是第二张海报')
+    }else if (_id == 'b3') {
+      console.log('这是第三张海报')
+      // 跳转到自定义页面
+      wx.navigateTo({
+        url: '../logs/logs'
+      })
+      
+    }
   }
 })
