@@ -27,7 +27,7 @@ Page({
       {id:'item1',text:'服装'},
       {id:'item2',text:'护肤'},
       {id:'item3',text:'美妆'},
-      {id:'item4',text:'食品'},
+      {id:'item4',text:'美食'}
     ]
   },
   //事件处理函数

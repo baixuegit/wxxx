@@ -28,6 +28,10 @@
     <view id="red" class="bc_red swiper-image"></view>
     <view class="bc_green swiper-image"></view>
   </scroll-view> -->
+  <view class="body-view">
+    <switch checked bindchange="switch1Change" />
+    <switch bindchange="switch2Change" />
+  </view>
 </view>
 
 

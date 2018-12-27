@@ -2,7 +2,7 @@
   "pages": ["pages/index/index", "pages/logs/logs"],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ab3eb7",
+    "navigationBarBackgroundColor": "#de2d3b",
     "navigationBarTitleText": "柏雪的小程序",
     "navigationBarTextStyle": "black",
     "backgroundColor": "#ffffff"
